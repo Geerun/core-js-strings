@@ -38,7 +38,7 @@ function getStringLength(Str) {
  *   isString(new String('test')) => true
  */
 function isString(str) {
-  return (typeof str == "string" );
+  return typeof str === 'string';
 }
 
 /**
@@ -54,7 +54,7 @@ function isString(str) {
  *   concatenateStrings('', 'bb') => 'bb'
  */
 function concatenateStrings(str1, str2) {
-return (str1 + str2)
+  return str1 + str2;
 }
 
 /**
@@ -69,7 +69,7 @@ return (str1 + str2)
  *   getFirstChar('') => ''
  */
 function getFirstChar(str) {
-  return str[0]
+  return str[0];
 }
 
 /**
@@ -84,7 +84,7 @@ function getFirstChar(str) {
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces() {
-  return str.trimStart().trimEnd()
+  return str.trimStart().trimEnd();
 }
 
 /**
@@ -99,7 +99,7 @@ function removeLeadingAndTrailingWhitespaces() {
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
 function removeLeadingWhitespaces() {
-  return str.trimStart()
+  return str.trimStart();
 }
 
 /**
@@ -114,7 +114,7 @@ function removeLeadingWhitespaces() {
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
 function removeTrailingWhitespaces(str) {
-  return str.trimEnd()
+  return str.trimEnd();
 }
 
 /**
@@ -132,9 +132,11 @@ function removeTrailingWhitespaces(str) {
  */
 function repeatString(str, times) {
   let res = '';
-  if (times <= 0)return  res = ""; else
-  for(let i=0; i < times; i++) {res += str };
-    return res   
+  if (times <= 0) return (res = '');
+  for (let i = 0; i < times; i++) {
+    res += str;
+  }
+  return res;
 }
 
 /**
@@ -150,7 +152,7 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeFirstOccurrences(str, value) {
- return str.replace(value,'')
+  return str.replace(value, '');
 }
 
 /**
@@ -166,10 +168,9 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeLastOccurrences(str, value) {
-  let lastIndex = str.lastIndexOf(value)
-  let res = str.slice(0, lastIndex) + 
-      str.slice(lastIndex + value.length)
-  return res
+  const lastIndex = str.lastIndexOf(value);
+  const res = str.slice(0, lastIndex) + str.slice(lastIndex + value.length);
+  return res;
 }
 
 /**
